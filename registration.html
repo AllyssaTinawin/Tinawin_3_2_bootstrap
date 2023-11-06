@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <title>Registration - Allyshoppe</title>
+
+    <style>
+        body {
+            background-image: url('satin.jpg'); 
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        form {
+            background-color: rgba(255, 255, 255, 0.9); 
+            padding: 80px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .back-button {
+            background-color: #e843a9;
+            color: white;
+            font-size: 20px;
+            border: none;
+            padding: 25px 30px;
+            border-radius: 5px;
+            border-color: black;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Create a registration form -->
+    <div></div>
+    <form>
+        <h2>Registration</h2>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <input type="submit" style="background-color:#e843a9; color: white; font-size: 20px; border-color: rgba(0, 0, 0, 0); border-radius: 5px; padding: 23px 30px;" value="Register">
+
+        <button class="back-button" onclick="goBack()">Back</button>
+        </form>
+
+        <script>
+            function goBack() {
+                window.history.back();
+            }
+        </script>
+
+            </div>
+        </div>
+
+
+</body>
+</html>

@@ -1,4 +1,3 @@
-
   <!doctype html>
 <html lang="en">
   <head>
@@ -8,6 +7,59 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
    <title><b>Allyshoppe</b></title>
   </head>
+
+  <body>
+
+    <style>
+  
+        body {
+            background-image: url('satin.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+          }
+
+            .modal {
+              display: none;
+              position: fixed;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background-color: rgba(0, 0, 0, 0.7);}
+  
+            .modal-overlay {
+              display: none;
+              position: fixed;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background-color: rgba(34, 122, 103, 0.5);
+              z-index: 1;
+                      
+                  }
+          
+            .modal-content {
+               position: fixed;
+               top: 50%;
+               left: 35%;
+               width: 50%;
+               transform: translate(-20%, -50%);
+               background-color: #F5E8B7;
+               padding: 20px;
+                border: 1px solid #268b77;
+                border-radius: 10px;
+                  }
+                  .close {
+                color: #333;
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                font-size: 20px;
+                cursor: pointer;
+  }
+      </style>
+    
   
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" align="right">
@@ -21,6 +73,7 @@
                 <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
               </li>
             </ul></div>
+            
         <nav class="navbar navbar-light bg-dark" align-right>
             <font class="form-inline">
               <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -67,7 +120,8 @@
             <center>
         
         <button onclick="openLoginModal()" button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="background-color:#e843a9; color: white; border-color: black ;">Login</button>
-        
+        <a href="registration.html" class="btn btn-outline-success my-2 my-sm-0" style="background-color:#e843a9; color: white; border-color: black; padding: 30p;">Register</a>
+
         
         <div id="loginModal" class="modal-overlay">
             <div class="modal-content">
@@ -84,6 +138,165 @@
                 <button onclick="closeLoginModal()"  style="background-color:#e843a9; color: white; border-color: black;" >Close</button>
             </div>
         </div>
+
+        <script>
+          
+          function openLoginModal() {
+              document.getElementById('loginModal').style.display = 'block';
+          }
+      
+          function closeLoginModal() {
+              document.getElementById('loginModal').style.display = 'none';
+          }
+      </script>
+      </center>
+      </form>
+        </nav>
+   </nav>
+    </form>
+  </div>
+</div>
+</nav>
+<hr>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="card">
+          <img class="card-img-top" src="dress.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title" style="color: black; font-size: 24px;" onmouseover="this.style.color='white'" onmouseout="this.style.color='black'"><b>CHIFFON DRESS</b></h5>
+            <p class="card-text"><b>Size:</b> Small </p>
+            <p class="price"><b>Price:</b> ₱250.00</p>
+            <p class="fabric"><b>Material:</b> crepe, and chiffon</p>
+            <p class="colors"><b>Colors:</b> black, purple, brown.</p>
+            <p class="stocks"><b>Stocks: </b>100pcs</p>
+            <div class="btn-container">
+              <button class="btn btn-primary" style="background-color: #e843a9; border-color: black;">Add to cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <img class="card-img-top" src="romper.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title" style="color:black; font-size: 24px;" onmouseover="this.style.color='white'" onmouseout="this.style.color='black'"><b>BBK ROMPER</b></h5>
+            <p class="card-text"><b>Size:</b> Small-Semi Medium</p> 
+            <p class="price"><b>Price:</b> ₱350.00</p>
+            <p class="fabric"><b>Material:</b> HQ cotton</p>
+            <p class="colors"><b>Colors:</b> black, white, brown.</p>
+            <p class="stocks"><b>Stocks: </b>50pcs</p>
+            <div class="btn-container">
+              <button class="btn btn-primary" style="background-color: #e843a9; border-color: black;">Add to cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <img class="card-img-top" src="coords.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title" style="color:black; font-size: 24px;" onmouseover="this.style.color='white'" onmouseout="this.style.color='black'"><b>SELF TIE COORDS</b></h5>
+            <p class="card-text"><b>Size:</b> Small-Large</p> 
+            <p class="price"><b>Price:</b> ₱280.00</p>
+            <p class="fabric"><b>Material:</b> crepe, and chiffon</p>
+            <p class="colors"><b>Colors:</b> black, nude, maroon.</p>
+            <p class="stocks"><b>Stocks: </b>57pcs</p>
+            <div class="btn-container">
+              <button class="btn btn-primary" style="background-color: #e843a9; border-color: black;">Add to cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <img class="card-img-top" src="cut out brown.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title" style="color:black; font-size: 24px;" onmouseover="this.style.color='white'" onmouseout="this.style.color='black'"><b>CUT OUT DRESS</b></h5>
+            <p class="card-text"><b>Size:</b> Small-Semi Medium</p> 
+            <p class="price"><b>Price:</b> ₱350.00</p>
+            <p class="fabric"><b>Material:</b> nylon </p>
+            <p class="colors"><b>Colors:</b> black, white, choco.</p>
+            <p class="stocks"><b>Stocks: </b>35pcs</p>
+            <div class="btn-container">
+              <button class="btn btn-primary" style="background-color: #e843a9; border-color: black;">Add to cart</button>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br>
+  <center>
+    <button id="openModalBtn" style="background-color:#e843a9; color: white; border-color: black;">Add a Product</button>
+  </center>
+
+  <body>
+
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="addProductLabel">Add a product</h1>
+          </div>
+          <div class="modal-body">
+          
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+              <label for="floatingInput">Product Name</label>
+            </div>
+            
+            <div class="input-group mb-3">
+              <span class="input-group-text">Description</span>
+              <textarea class="form-control" aria-label="With textarea"></textarea>
+            </div>
+
+            <div class="input-group mb-3">
+              <span class="input-group-text">₱</span>
+              <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+              <span class="input-group-text">.00</span>
+            </div>
+
+            <div class="">
+              <label for="formFile" class="form-label">Product Image</label>
+              <input class="form-control" type="file" id="formFile">
+            </div>
+
+          </div>
+          <div class="modal-footer">
+            <button id="closeModalBtn" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-success">Add Product</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+    <script>
+        const modal = document.getElementById('productModal');
+        const openModalBtn = document.getElementById('openModalBtn');
+        const closeModalBtn = document.getElementById('closeModalBtn');
+
+
+        openModalBtn.addEventListener('click', function() {
+            modal.style.display = 'block';
+        });
+
+
+        closeModalBtn.addEventListener('click', function() {
+            modal.style.display = 'none';
+        });
+
+
+        window.addEventListener('click', function(event) {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
         
         <script>
         
@@ -101,51 +314,6 @@
      </nav>
      <hr>
      <center>
-    <table>
-        <th>
-     <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="dress.jpg" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">DRESS</h5>
-            <p class="card-text">Size: Small</p>
-            <p class="price">₱250.00</p>
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="background-color:#e843a9; color: white; border-color: black;">Add to cart</button>
-        </div>
-      </div>
-    </th>
-    <th>
-        <div class="card" style="width: 18rem;">
-           <img class="card-img-top" src="romper.jpg" alt="Card image cap">
-           <div class="card-body">
-            <h5 class="card-title">ROMPER</h5>
-            <p class="card-text">Size: Small</p>
-            <p class="price">₱350.00</p>
-             <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="background-color:#e843a9; color: white; border-color: black;">Add to cart</button>
-           </div>
-         </div>
-       </th>
-       <th>
-        <div class="card" style="width: 18rem;">
-           <img class="card-img-top" src="coords.jpg" alt="Card image cap">
-           <div class="card-body">
-            <h5 class="card-title">COORDS</h5>
-            <p class="card-text">Size: Small</p>
-            <p class="price">₱280.00</p>
-             <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="background-color:#e843a9; color: white; border-color: black;">Add to cart</button>
-           </div>
-         </div>
-       </th>
-       <th>
-        <div class="card" style="width: 18rem;">
-           <img class="card-img-top" src="cut out brown.jpg" alt="Card image cap">
-           <div class="card-body">
-            <h5 class="card-title">DRESS</h5>
-            <p class="card-text">Size: Small</p>
-            <p class="price">₱230.00</p>
-             <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="background-color:#e843a9; color: white; border-color: black;">Add to cart</button>
-           </div>
-         </div>
-       </th>
 
        <style>
         .card {
@@ -160,6 +328,7 @@
        </style>
    
     </table>
+
 </center>
 <hr>
   </body>
