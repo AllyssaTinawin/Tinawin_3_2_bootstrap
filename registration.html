@@ -1,9 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-
     <title>Registration - Allyshoppe</title>
-
     <style>
         body {
             background-image: url('satin.jpg'); 
@@ -19,10 +17,10 @@
 
         form {
             background-color: rgba(255, 255, 255, 0.9); 
-            padding: 80px;
+            padding: 40px;
             border-radius: 10px;
-            text-align: center;
-            font-size: 30px;
+            text-align: left;
+            font-size: 20px;
         }
 
         .back-button {
@@ -30,39 +28,86 @@
             color: white;
             font-size: 20px;
             border: none;
-            padding: 25px 30px;
+            padding: 21px 30px;
             border-radius: 5px;
             border-color: black;
             cursor: pointer;
         }
+
+        .password-container {
+            display: flex;
+            align-items:center;
+            margin-top: 20px;
+        }
+
+        #password {
+            flex: 1;
+        }
+
+        #show-password {
+            background-color: #e843a9;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        #error-message {
+            color: red;
+            font-size: 16px;
+            margin-top: 10px;
+        }
     </style>
 </head>
-
 <body>
-    <!-- Create a registration form -->
-    <div></div>
-    <form>
+    <form onsubmit="return validateForm();">
         <h2>Registration</h2>
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required><br><br>
 
         <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br><br>
+        <div class="password-container">
+            <input type="password" id="password" name="password" required>
+            <button id="show-password" type="button" onclick="togglePasswordVisibility()">Show</button>
+        </div>
+        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required><br><br>
 
-        <input type="submit" style="background-color:#e843a9; color: white; font-size: 20px; border-color: rgba(0, 0, 0, 0); border-radius: 5px; padding: 23px 30px;" value="Register">
+        <input type="submit" style="background-color:#e843a9; color: white; font-size: 20px; border-color: rgba(0, 0, 0, 0); border-radius: 5px; padding: 20px 30px;" value="Register">
 
         <button class="back-button" onclick="goBack()">Back</button>
-        </form>
+        
+        <span id="error-message"></span>
+    </form>
 
-        <script>
-            function goBack() {
-                window.history.back();
+    <script>
+        function togglePasswordVisibility() {
+            const passwordInput = document.getElementById('password');
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+            } else {
+                passwordInput.type = 'password';
             }
-        </script>
+        }
 
-            </div>
-        </div>
+        function validateForm() {
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            const errorMessage = document.getElementById('error-message');
 
+            if (password !== confirmPassword) {
+                errorMessage.textContent = 'Passwords do not match';
+                return false;
+            } else {
+                errorMessage.textContent = '';
+                return true;
+            }
+        }
 
+        function goBack() {
+            window.history.back();
+        }
+    </script>
 </body>
 </html>
